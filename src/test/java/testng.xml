@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="AltoroMutual API Test Suite" verbose="1" parallel="tests" thread-count="3">
+    <test name="Login API Tests">
+        <classes>
+            <class name="com.tac.apitesting.tests.LoginAPITest"/>
+        </classes>
+    </test>
+
+    <test name="Account API Tests">
+        <classes>
+            <class name="com.tac.apitesting.tests.AccountAPITest"/>
+        </classes>
+    </test>
+
+    <test name="Transfer API Tests">
+        <classes>
+            <class name="com.tac.apitesting.tests.TransferAPITest"/>
+        </classes>
+    </test>
+    <test name="Feedback API Tests">
+        <classes>
+            <class name="com.tac.apitesting.tests.FeedBackAPITest"/>
+        </classes>
+    </test>
+    <test name="Admin API Tests">
+        <classes>
+            <class name="com.tac.apitesting.tests.AdminAPITest"/>
+        </classes>
+    </test>
+    <test name="Logout API Tests">
+        <classes>
+            <class name="com.tac.apitesting.tests.LogOutAPITest"/>
+        </classes>
+    </test>
+</suite>

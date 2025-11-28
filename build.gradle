@@ -1,0 +1,46 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.11'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.tac'
+version = '0.0.1-SNAPSHOT'
+description = 'demo project for rest assured'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+ext{
+	restAssuredVersion = '5.4.0'
+	testngVersion = '7.8.0'
+	jacksonVersion = '2.15.2'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	//implementation "o.rest-assured:rest-assured:$restAssuredVersion"
+	testImplementation "io.rest-assured:rest-assured:$restAssuredVersion"
+	testImplementation "org.testng:testng:$testngVersion"
+	implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+	implementation "org.slf4j:slf4j-simple:2.0.7"
+}
+
+
+test{
+	useTestNG()
+}
